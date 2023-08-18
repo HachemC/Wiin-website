@@ -1,0 +1,246 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed&family=Noto+Sans+JP:wght@600&display=swap");
+.grid-container {
+  background: linear-gradient(to bottom, #135adde0 33rem, white 50%);
+}
+.auth-form-container,
+.login-form,
+.register-form {
+  flex-direction: column;
+  align-items: center;
+}
+
+.grid-container {
+  display: grid;
+  height: 100vh;
+  width: auto;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  /*grid-auto-rows: repeat(12, minmax(200px, auto));*/
+}
+.login-form label {
+  font-family: "Noto Sans JP", sans-serif;
+  text-align: left;
+  padding: 0.5rem 0;
+  display: flex;
+}
+.login-form {
+  grid-row: 4;
+  grid-column: 1/5;
+  margin: 0 0 0 28px;
+}
+input {
+  margin: 0.9rem 0;
+}
+.login {
+  border: none;
+  background-color: #1877f2;
+  color: white;
+  position: relative;
+
+  width: 19rem;
+  height: 3rem;
+  border-radius: 1.9rem;
+  font-size: 2rem;
+  top: 3rem;
+  cursor: pointer;
+}
+.button-link {
+  background: none;
+  color: red;
+  text-decoration: underline;
+  border: none;
+}
+.button-link-one {
+  background: none;
+  color: #2fb139;
+  text-decoration: underline;
+  border: none;
+  position: relative;
+  bottom: -25rem;
+  text-decoration: none;
+  font-family: "Noto Sans JP", sans-serif;
+  left: 21rem;
+  font-size: unset;
+  cursor: pointer;
+}
+.auth-form-container {
+  border: solid;
+  background-color: white;
+  border-radius: 3.1rem;
+  /* height: 86%; */
+  grid-row: 2/10;
+  margin: auto;
+  width: 539px;
+  height: 780px;
+  grid-column: 4/8;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+
+  border: 1px gray;
+  box-shadow: 9px 9px 9px 9px rgba(0, 0, 0, 0.2);
+}
+
+.textone {
+  margin-left: 18px;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: larger;
+  grid-column: 1/2;
+  width: 181px;
+  /* margin: initial; */
+  margin-top: 50px;
+  height: 83px;
+  align-self: normal;
+}
+.textone span {
+  color: #2fb139;
+  font-weight: bold;
+  font-family: "Noto Sans JP", sans-serif;
+}
+.noacc {
+  /* margin: 1rem; */
+
+  /* margin: 1rem; */
+  height: 96px;
+  grid-column: 4;
+  width: 51px;
+  align-self: end;
+}
+.noacc span {
+  color: #a5a3a3c7;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.button-link {
+  background: none;
+  color: #2fb139;
+  /* text-decoration: underline; */
+  border: none;
+  font-size: medium;
+  font-weight: bold;
+  text-decoration: none;
+
+  cursor: pointer;
+}
+
+.login-form input {
+  margin: 0.9rem 0;
+  height: 3.8rem;
+  width: 28rem;
+  border-radius: 0.9rem;
+  outline-color: none;
+  outline: none;
+  border: solid 1px grey;
+  font-family: "Noto Sans JP", sans-serif;
+}
+.login-form input:focus {
+  box-shadow: 0 0 5px #1877f2;
+}
+input::placeholder {
+  text-indent: 1rem;
+}
+.googlebtn {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background-color: #9dd7f36e;
+  grid-template-rows: repeat(4, 1fr);
+  height: 3.5rem;
+  /* text-align: center; */
+  width: 19rem;
+  border-radius: 0.8rem;
+  height: 4rem;
+}
+.googleimg {
+  height: 1.42rem;
+  justify-content: space-evenly;
+  /* align-items: stretch; */
+  grid-column: 2;
+  grid-row: 1;
+  justify-self: center;
+  margin-top: 18px;
+  margin-left: 17px;
+}
+.btngooglee {
+  background: none;
+  grid-column: 3;
+  border: none;
+  color: #135addad;
+  cursor: pointer;
+  top: 0.5rem;
+  font-size: unset;
+  font-family: "Noto Sans JP", sans-serif;
+  left: 2rem;
+}
+.facebook-login {
+  background-color: #eee;
+  width: 4rem;
+  height: 4rem;
+  position: relative;
+  border-radius: 1rem;
+}
+
+.apple-login {
+  display: inline-flex;
+  background-color: #eee;
+  width: 4rem;
+  height: 4rem;
+  position: relative;
+  border-radius: 1rem;
+
+  /* align-content: center; */
+}
+.text-one {
+  margin-left: 18px;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: larger;
+  grid-column: 1/5;
+  width: 247px;
+  /* margin: initial; */
+  margin-top: 50px;
+  height: 83px;
+  align-self: normal;
+}
+.welcometext {
+  width: 311px;
+  height: 115px;
+  grid-column: 2;
+  grid-row: 2;
+  margin: auto;
+
+  font-family: "Noto Sans JP", sans-serif;
+  color: white;
+  text-align: left;
+}
+.welcometext-title {
+  font-size: 3em;
+  width: 246px;
+}
+.a {
+  font-size: 0.65em;
+  line-height: 1.7em;
+  position: relative;
+}
+
+.welcometext p {
+  line-height: 1.5;
+
+  width: 311px;
+  height: 115px;
+}
+.welcometext h2 {
+  font-size: 3rem;
+}
+.login {
+  font-size: x-large;
+}
+/* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+.loginbuttons {
+  grid-column: -1;
+  justify-content: center;
+  align-items: center;
+  /* display: contents; */
+  grid-row: 3;
+  grid-column: 1/5;
+  display: inline-flex;
+  justify-content: space-around;
+}

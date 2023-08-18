@@ -1,0 +1,164 @@
+.gen {
+  grid-row: 3;
+  grid-column: 7;
+
+  text-align: left;
+
+  line-height: normal;
+  width: 334px;
+}
+.one {
+  color: #000;
+  font-family: Poppins;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.two {
+  color: #0089ed;
+  font-family: Poppins;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.three {
+  color: #000;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.four {
+  color: #000;
+  font-family: Poppins;
+  font-size: 23px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  grid-column: 1/3;
+
+  text-align: left;
+}
+.page {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+.cont2 {
+  margin-left: 2rem;
+  grid-column: 5;
+  grid-row: 1/8;
+  margin-top: 4rem;
+}
+.Fulldetails {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: repeat(12, auto);
+  grid-column: 5;
+  grid-row: 2/5;
+}
+.Fulldetails input {
+  height: 30px;
+
+  border-radius: 3px;
+  outline: none;
+  border: solid 1px #1877f2;
+}
+.Fulldetails label {
+  color: #3f3f3f;
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.Fulldetails span {
+  height: fit-content;
+  color: #000;
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.Skills {
+  grid-column: 9/12;
+  display: grid;
+  grid-row: 2;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto auto auto;
+}
+.Skills label {
+  grid-column: 1/3;
+  align-self: center;
+  text-align: left;
+  color: #000;
+  font-family: Poppins;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.Skills div {
+  width: 150px;
+  height: 40px;
+  flex-shrink: 0;
+  border-radius: 20px;
+  background: #0089ed;
+  color: #fff;
+  font-family: Poppins;
+  font-size: 19px;
+  font-style: normal;
+  display: flex;
+
+  line-height: normal;
+  align-content: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.Skills input {
+  width: 97px;
+  display: flex;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.skills span {
+  color: #fff;
+  font-family: Poppins;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-align: center;
+}
+.Skills button {
+  height: 28px;
+  grid-column: 1/3;
+  width: 94px;
+  justify-self: center;
+  background-color: #364047;
+  outline: none;
+  border: none;
+  border-radius: 11px;
+  cursor: pointer;
+  color: white;
+  font-size: 18px;
+}
+.loader {
+  position: relative;
+  width: 610px;
+  height: 3px;
+  overflow: hidden;
+  background: #0089ed;
+}

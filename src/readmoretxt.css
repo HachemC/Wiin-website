@@ -1,0 +1,21 @@
+.read-more-text {
+  position: relative;
+  text-align: left;
+}
+
+.text-content {
+  margin: 0;
+  padding: 0;
+  transition: max-height 0.3s ease-in-out, overflow 0.3s ease-in-out;
+  white-space: pre-wrap; /* Preserve line breaks */
+}
+
+.truncated {
+  max-height: 70px;
+  overflow: hidden;
+}
+
+.read-more-button {
+  color: green;
+  cursor: pointer;
+}

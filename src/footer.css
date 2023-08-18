@@ -1,0 +1,18 @@
+.footer {
+  color: #fff;
+  font-family: Poppins;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  padding: 20px 0;
+  text-align: center;
+  grid-column: 1/13;
+  background: #3f3f3f;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,35 @@
+.jobform {
+  grid-column: 2;
+  display: grid;
+}
+.jobform div {
+  text-align: left;
+}
+.jobform input {
+  height: 33px;
+  border: 1px solid;
+  /* border: solid 2px blue; */
+  border-color: #0163e0;
+  /* color: white; */
+  font-size: x-large;
+  outline: none;
+}
+.jobform button {
+  border-radius: 35px;
+  outline: none;
+  border: none;
+  /* justify-self: center; */
+  align-self: center;
+  height: 49px;
+  background-color: #0163e0;
+  color: white;
+  font-size: x-large;
+}
+.jobform textarea {
+  height: 98px;
+  font-size: x-large;
+  border-color: #0163e0;
+}
+.fille input {
+  border: none;
+}

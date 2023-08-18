@@ -1,0 +1,47 @@
+/* JobPage.css */
+.page3 {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  margin-top: 80px;
+}
+
+/* Optional: Adjust the width of each job post */
+.jobs-list {
+  width: 100%;
+}
+.pic {
+  grid-column: 2;
+  grid-row: 1;
+}
+.jobs-page {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 75px;
+  grid-template-rows: 1/12;
+  grid-row: 1/13;
+  grid-column: 3/12;
+}
+.profile-picture2 {
+  border-radius: 50%;
+}
+.rate {
+  grid-column: 4;
+  text-align: left;
+}
+.re {
+  color: #000;
+  font-family: Poppins;
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.descr {
+  color: #000;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}

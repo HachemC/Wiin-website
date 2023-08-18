@@ -1,0 +1,175 @@
+.home {
+  background-color: #eee;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container3 {
+  border: 1px solid black;
+  border-radius: 10px;
+  height: 80%;
+  width: 65%;
+  display: flex;
+  overflow: hidden;
+}
+.SideBar {
+  flex: 1;
+  border-right: 1px solid black;
+  background-color: white;
+}
+.Chat {
+  flex: 2;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  background-color: blue;
+  height: 50px;
+  padding: 10px;
+  justify-content: space-between;
+  color: #ddddf7;
+}
+.l1 {
+  font-weight: bold;
+}
+.user33 {
+  display: flex;
+  gap: 10px;
+}
+.im {
+  background-color: #ddddf7;
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.Search {
+  border-bottom: 1px solid black;
+}
+.inputForm {
+  padding: 10px;
+}
+.inputForm input {
+}
+.userChat {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: black;
+  cursor: pointer;
+}
+.userChat:hover {
+  background-color: #2f2d52;
+}
+.userChat img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.userChatInfo span {
+  font-size: 18px;
+  font-weight: 50;
+}
+
+.userChatInfo p {
+  font-size: 14px;
+  color: lightgray;
+}
+.chat {
+  flex: 2;
+}
+.chatinfo {
+  height: 50px;
+  background-color: #5d5b8d;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  color: lightgray;
+}
+.chatinfo img {
+  height: 24px;
+  cursor: pointer;
+}
+.mes {
+  background-color: #ddddf7;
+  padding: 10px;
+  height: calc(100% - 160px);
+  overflow: scroll;
+  &.owner {
+    flex-direction: row-reverse; /*check how this will work with a condition */
+    p {
+      background-color: blue;
+
+      color: white;
+      border-radius: 10px 0px 10px 10px;
+    }
+  }
+}
+.Inputt {
+  height: 50px;
+  background-color: white;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.Inputt input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 18px;
+}
+.Inputt input::placeholder {
+  color: lightgray;
+}
+.tex {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.tex img {
+  height: 24px;
+  cursor: pointer;
+}
+.ss1 {
+  border: none;
+  padding: 10px 15px;
+  color: white;
+  background-color: #5d5b8d;
+  cursor: pointer;
+}
+.mess {
+  display: flex;
+  gap: 20px;
+}
+.messInfo {
+  display: flex;
+  flex-direction: column;
+  color: gray;
+  font-weight: 300;
+}
+.messInfo img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.messContent img {
+  width: 50%;
+}
+.messContent {
+  max-width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.messContent p {
+  background-color: wheat;
+  padding: 10px 20px;
+  border-radius: 0px 10px 10px 10px;
+  max-width: max-content;
+}
