@@ -3,7 +3,7 @@ import React from "react";
 const Navbar = () => {
   return (
     <div className="navbar">
-      <span className="l1">chat</span>
+      <span className="l1"></span>
       <div className="user33">
         <img className="im" src={require("../images/male.jpeg")} alt=""></img>
         <div className="userChatInfo">

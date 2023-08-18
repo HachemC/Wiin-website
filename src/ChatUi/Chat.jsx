@@ -4,6 +4,7 @@ import More from "../images/more.png";
 import Add from "../images/add.png";
 import Mes from "./Mes";
 import Input from "./Input";
+import Navbar from "./Navbar";
 
 const Chat = () => {
   const [messages, setMessages] = useState([]);
@@ -15,7 +16,8 @@ const Chat = () => {
   return (
     <div className="Chat">
       <div className="chatinfo">
-        <span>Jane</span>
+        <Navbar></Navbar>
+        <span></span>
         <div className="chatIcons">
           <img src={Cam} alt=""></img>
           <img src={Add} alt=""></img>

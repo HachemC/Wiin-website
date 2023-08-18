@@ -1,34 +1,43 @@
 .home {
-  background-color: #eee;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .container3 {
-  border: 1px solid black;
+  border: 1px solid gray;
   border-radius: 10px;
-  height: 80%;
+  height: 81%;
   width: 65%;
   display: flex;
   overflow: hidden;
+  gap: 100px;
+  border: none;
 }
 .SideBar {
-  flex: 1;
-  border-right: 1px solid black;
+  border-radius: 33px;
+  box-shadow: 9px 9px 9px 9px rgba(0, 0, 0, 0.1);
+  flex: 1 1;
+  border: 1px solid gray;
   background-color: white;
 }
 .Chat {
   flex: 2;
+  border: solid;
+  border-radius: 33px;
+  box-shadow: 9px 9px 9px 9px rgba(0, 0, 0, 0.1);
+
+  border: 1px solid gray;
+  background-color: white;
 }
 .navbar {
   display: flex;
   align-items: center;
-  background-color: blue;
+
   height: 50px;
   padding: 10px;
   justify-content: space-between;
-  color: #ddddf7;
+  color: black;
 }
 .l1 {
   font-weight: bold;
@@ -49,6 +58,8 @@
 }
 .inputForm {
   padding: 10px;
+  border-radius: 25px;
+  background: rgba(239, 246, 252, 0.87);
 }
 .inputForm input {
 }
@@ -61,7 +72,7 @@
   cursor: pointer;
 }
 .userChat:hover {
-  background-color: #2f2d52;
+  background-color: gray;
 }
 .userChat img {
   width: 50px;
@@ -80,27 +91,28 @@
 }
 .chat {
   flex: 2;
+  border: 1px solid black;
 }
 .chatinfo {
   height: 50px;
-  background-color: #5d5b8d;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 10px;
-  color: lightgray;
+  color: #303030;
 }
 .chatinfo img {
-  height: 24px;
+  height: 37px;
+  width: 37px;
   cursor: pointer;
 }
 .mes {
-  background-color: #ddddf7;
   padding: 10px;
   height: calc(100% - 160px);
   overflow: scroll;
   &.owner {
-    flex-direction: row-reverse; /*check how this will work with a condition */
+    /*check how this will work with a condition */
     p {
       background-color: blue;
 
@@ -110,12 +122,14 @@
   }
 }
 .Inputt {
-  height: 50px;
+  height: 41px;
   background-color: white;
   padding: 10px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border-radius: 0 0 32px 33px;
+  border-top: 1px solid;
 }
 .Inputt input {
   width: 100%;
@@ -139,12 +153,14 @@
   border: none;
   padding: 10px 15px;
   color: white;
-  background-color: #5d5b8d;
+  border-radius: 20px;
+  background: #0163e0;
   cursor: pointer;
 }
 .mess {
   display: flex;
   gap: 20px;
+  flex-direction: row-reverse;
 }
 .messInfo {
   display: flex;
@@ -164,12 +180,26 @@
 .messContent {
   max-width: 80%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row-reverse;
   gap: 10px;
 }
 .messContent p {
-  background-color: wheat;
+  border-radius: 25px;
+  background: #0163e0;
   padding: 10px 20px;
-  border-radius: 0px 10px 10px 10px;
+  color: #fff;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 1px;
   max-width: max-content;
+}
+.searchForm input {
+  width: 85%;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  border-bottom: solid 1px;
 }
