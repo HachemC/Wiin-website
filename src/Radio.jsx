@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "./App.css";
 
+import "./radiostyle.css";
+
 export const Radio = () => {
   const [selectedOption, setSelectedOption] = useState(null);
 

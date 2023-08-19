@@ -1,0 +1,36 @@
+.radioAR {
+  text-align: center;
+}
+
+.choice-containerAR {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 31rem;
+}
+
+.choice-optionAR {
+  padding: 1rem;
+  border: 1px solid #ccc;
+  height: 3rem;
+  width: 15rem;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center; /* Center text vertically */
+  justify-content: space-between; /* Spread text and check mark */
+  padding-left: 1rem; /* Add space to the left for check mark */
+  margin: 1rem;
+}
+
+.check-markAR {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #4caf50;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

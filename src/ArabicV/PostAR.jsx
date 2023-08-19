@@ -1,13 +1,19 @@
 import React from "react";
-import ReadMoreText from "./readmore";
-import ProfilPic from "./images/male.jpeg";
+import ReadMoreText from "../readmore";
+import ProfilPic from "../images/male.jpeg";
 import { useState } from "react";
-import closeIcon from "./images/fa_close.png";
+import closeIcon from "../images/fa_close.png";
 import { useHistory } from "react-router-dom";
 import { Link } from "react-router-dom";
-import "./post.css";
+import "./postAR.css"; // Make sure to import the appropriate AR CSS file
 
-const Post = ({ userProfilePic, username, timestamp, text }) => {
+const PostAR = ({
+  userProfilePic,
+  username,
+  timestamp,
+  text,
+  onFormSwitch,
+}) => {
   const [messageContent, setMessageContent] = useState("");
 
   const handleSendMessage = () => {
@@ -42,55 +48,60 @@ const Post = ({ userProfilePic, username, timestamp, text }) => {
   const handleViewJobs = (props) => {
     props.onFormSwitch("jobspage"); // Call the function passed via props to switch forms
   };
-  /*poop up control*/
+  /*popup control*/
   const [showPopup, setShowPopup] = useState(false);
   const togglePopup = () => {
     setShowPopup(!showPopup);
   };
+
   return (
-    <div className="post-grid">
-      <div className="post-container">
-        <div className="up">
+    <div className="post-gridAR">
+      <div className="post-containerAR">
+        <div className="upAR">
           <img
-            className="post-profile-pic"
+            className="post-profile-picAR"
             src={userProfilePic || ProfilPic}
             alt="User Profile"
           />
 
-          <div className="UsernameAndTime">
-            <span className="username">{username}</span>
-            <span className="timestamp">{getTimeAgo(timestamp)}</span>
+          <div className="UsernameAndTimeAR">
+            <span className="usernameAR">{username}</span>
+            <span className="timestampAR">{getTimeAgo(timestamp)}</span>
           </div>
         </div>
 
-        <div className="post-details">
+        <div className="post-detailsAR">
           <ReadMoreText text={text} />
         </div>
-        <div className="Observ">
-          <Link to="/JobsPage" className="view-old">
-            See provider's previous posts
+        <div className="ObservAR">
+          <Link
+            style={{ alignContent: "center" }}
+            to="/JobsPage"
+            className="view-oldAR"
+          >
+            انظر الأعمال السابقة للموفر
           </Link>
-          <button onClick={togglePopup} className="Contact-provider">
-            Contact provider
+          <button onClick={togglePopup} className="Contact-providerAR">
+            اتصل بمقدم الخدمة
           </button>
         </div>
       </div>
       {showPopup && (
-        <div className="popup">
-          <div className="popup-inner">
-            <div className="SendM">Send Message</div>
-            <button className="close-popup" onClick={togglePopup}>
+        <div className="popupAR">
+          <div className="popup-innerAR">
+            <div className="SendM">اتصل بمقدم الخدمة</div>
+            <button className="close-popupAR" onClick={togglePopup}>
               <img src={closeIcon} alt="Close" />
             </button>
             <textarea
-              className="txt"
+              className="txtAR"
               rows="4"
               placeholder="Type your message"
               value={messageContent}
               onChange={(e) => setMessageContent(e.target.value)}
             ></textarea>
-            <button className="send-message" onClick={handleSendMessage}>
-              Send Message
+            <button className="send-messageAR" onClick={handleSendMessage}>
+              أرسل رسالة
             </button>
           </div>
         </div>
@@ -99,4 +110,4 @@ const Post = ({ userProfilePic, username, timestamp, text }) => {
   );
 };
 
-export default Post;
+export default PostAR;

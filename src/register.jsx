@@ -5,6 +5,7 @@ import { ChoiceOption } from "./Radio";
 import { MyComponent } from "./imges";
 import { MyLogo } from "./logo";
 import { useHistory } from "react-router-dom";
+import "./registerstyle.css";
 export const Register = (props) => {
   const [email, setEmail] = useState("");
   const [Name, setName] = useState("");

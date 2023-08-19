@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Job.css";
 import { Link } from "react-router-dom";
 import Header from "./header";
+import "./Job.css";
 
 const Job = ({ title, description, imageSrc }) => {
   const maxDescriptionLength = 250; // Maximum length of the truncated description

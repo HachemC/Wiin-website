@@ -4,6 +4,7 @@ import Job from "./Job";
 import Header from "./header";
 import { ProfilePicture } from "./profilepic";
 import JobForm from "./JobForm";
+import "./jobspage.css";
 
 export const JobsPage = ({ jobs, onAddJob }) => {
   const history = useHistory();
@@ -13,6 +14,11 @@ export const JobsPage = ({ jobs, onAddJob }) => {
     address: "Gabes, Tunisia",
     job: "Software Developer",
   });
+  const [selectedLanguage, setSelectedLanguage] = useState("EN");
+
+  const handleLanguageChange = (language) => {
+    setSelectedLanguage(language);
+  };
 
   const jobList = jobs.map((job, index) => (
     <Link
@@ -40,7 +46,10 @@ export const JobsPage = ({ jobs, onAddJob }) => {
 
   return (
     <>
-      <Header></Header>
+      <Header
+        onLanguageChange={handleLanguageChange}
+        selectedLanguage={selectedLanguage}
+      ></Header>
       <div className="page3">
         <div className="pic">
           <ProfilePicture></ProfilePicture>

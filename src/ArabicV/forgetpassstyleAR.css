@@ -1,0 +1,116 @@
+.grid-containerAR {
+  display: grid;
+  height: 100vh;
+  width: auto;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+}
+
+.welcometextAR {
+  grid-column: 2;
+  grid-row: 2;
+  margin: auto;
+  height: 115px;
+  width: 315px;
+  font-family: "Noto Sans JP", sans-serif;
+  color: white;
+  text-align: right;
+}
+
+.auth-form-container-fogetAR {
+  border: solid;
+  background-color: white;
+  border-radius: 3.1rem;
+  grid-row: 2/10;
+  margin: auto;
+  width: 36rem;
+  height: 40rem;
+  grid-column: 4/8;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  border: 1px gray;
+  box-shadow: 9px 9px 9px 9px rgba(0, 0, 0, 0.2);
+  text-align: right;
+}
+
+.textoneeAR {
+  margin-right: 18px;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: larger;
+  grid-column: 1/2;
+  width: 300px;
+  margin-top: 50px;
+  height: 83px;
+  align-self: normal;
+}
+.textoneeAR p {
+  color: #000;
+  font-family: Cairo;
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.textoneeAR h1 {
+  color: #000;
+  font-family: Cairo;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.textoneeAR span {
+  color: #2fb139;
+  font-weight: bold;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.loginn-formAR {
+  grid-row: 4;
+  grid-column: 1/5;
+  margin: 0 28px 0 0;
+}
+
+#userrNameAR {
+  margin: 0.9rem 0;
+  height: 3.8rem;
+  width: 31.5rem;
+  border-radius: 0.9rem;
+  outline-color: none;
+  outline: none;
+  border: solid 1px grey;
+  color: #000;
+  font-family: Cairo;
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  display: flex;
+}
+.post-detailsAR .read-more-text {
+  text-align: right;
+  font-family: "Poppins", sans-serif;
+  color: #000;
+  text-align: right;
+  /* font-family: Poppins; */
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.loginAR {
+  border: none;
+  background-color: #1877f2;
+  color: white;
+  position: relative;
+  width: 32rem;
+  height: 4rem;
+  border-radius: 1rem;
+  font-size: 2rem;
+  font-family: "Noto Sans JP", sans-serif;
+  cursor: pointer;
+  font-size: x-large;
+}

@@ -1,0 +1,158 @@
+.grid-containerAR {
+  display: grid;
+  height: 100vh;
+  width: auto;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  direction: rtl;
+}
+
+.register-form-containerAR {
+  border: solid;
+  background-color: white;
+  border-radius: 3.1rem;
+  grid-row: 2/10;
+  margin: auto;
+  width: 36rem;
+  height: 55rem;
+  grid-column: 4/8;
+  font-family: "Cairo", sans-serif;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  border: 1px gray;
+  box-shadow: 9px 9px 9px 9px rgba(0, 0, 0, 0.2);
+}
+
+.register-formAR label {
+  text-align: left;
+  padding: 0.5rem 0;
+  display: flex;
+}
+
+.register-formAR {
+  grid-row: 4;
+  grid-column: 1/5;
+  margin: 0 24px 0 0;
+  text-align: right;
+}
+
+#UserNameAR {
+  margin: 0.9rem 0;
+  height: 3.8rem;
+  width: 31.5rem;
+  border-radius: 0.9rem;
+  outline-color: none;
+  outline: none;
+  border: solid 1px grey;
+
+  display: flex;
+}
+
+.NameAndNumberAR {
+  display: flex;
+  gap: 10px;
+}
+
+.name-fieldAR,
+.contact-fieldAR {
+  flex: 1;
+}
+
+.name-fieldAR label,
+.contact-fieldAR label {
+  margin-bottom: 5px;
+  text-align: right;
+}
+
+.name-fieldAR input,
+.contact-fieldAR input {
+  width: 15rem;
+  height: 4rem;
+  padding: 0rem;
+  margin: 0 0 2rem;
+  border-radius: 1rem;
+  outline: none;
+  border: solid 1px gray;
+}
+
+#passworddAR {
+  margin: 0.9rem 0;
+  height: 3.8rem;
+  width: 31.5rem;
+  border-radius: 0.9rem;
+  outline-color: none;
+  outline: none;
+  border: solid 1px grey;
+
+  display: flex;
+}
+
+#signupAR {
+  border: none;
+  background-color: #1877f2;
+  color: white;
+  position: relative;
+  width: 32rem;
+  height: 4rem;
+  border-radius: 1rem;
+  font-size: 2rem;
+
+  cursor: pointer;
+  font-size: x-large;
+}
+
+.welcometexttAR {
+  grid-column: 2;
+  grid-row: 2;
+  margin: auto;
+  height: 115px;
+  width: 315px;
+
+  text-align: right;
+  color: #fff;
+  text-align: right;
+  font-family: Cairo;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.texttwoAR {
+  margin-left: 18px;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: larger;
+  grid-column: 1/2;
+  width: 181px;
+  margin-top: 50px;
+  height: 83px;
+  align-self: normal;
+}
+
+.texttwoAR span {
+  color: #2fb139;
+  font-weight: bold;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.BBAR {
+  height: 96px;
+  grid-column: 4;
+  width: 114px;
+  align-self: end;
+  color: #8d8d8d;
+  font-family: Cairo;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.register-formAR input:focus,
+.un input:focus {
+  box-shadow: 0 0 5px #1877f2;
+}
+.register-formAR input {
+  font-size: large;
+  font-family: "Cairo", sans-serif;
+}

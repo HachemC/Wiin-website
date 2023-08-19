@@ -6,8 +6,14 @@ import BasicRating from "./ratingComp";
 import FullWidthTextField from "./feedback";
 import IconLabelButtons from "./sendingbutton";
 import Footer from "./footer";
+import { useState } from "react";
 const SelectedJobPage = ({ jobs }) => {
   const { title } = useParams();
+  const [selectedLanguage, setSelectedLanguage] = useState("EN");
+
+  const handleLanguageChange = (language) => {
+    setSelectedLanguage(language);
+  };
 
   const selectedJob = jobs.find(
     (job) => job.title === decodeURIComponent(title)
@@ -19,7 +25,10 @@ const SelectedJobPage = ({ jobs }) => {
 
   return (
     <>
-      <Header></Header>
+      <Header
+        onLanguageChange={handleLanguageChange}
+        selectedLanguage={selectedLanguage}
+      ></Header>
       <div className="selected-job">
         <div className="d">
           {" "}

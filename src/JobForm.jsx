@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./jobform.css";
 
 const JobForm = ({ onAddJob }) => {
   const [title, setTitle] = useState("");

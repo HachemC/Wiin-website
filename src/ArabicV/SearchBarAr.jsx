@@ -1,40 +1,39 @@
 import React from "react";
 import { useState } from "react";
-import "./searchbarre.css";
+import "./SearchBarAr.css";
 
-export const SearchBar = () => {
+export const SearchBarAr = () => {
   const [searchText, setSearchText] = useState("");
   const [selectedLocation, setSelectedLocation] = useState("");
   const performSearch = () => {
-    /////
+    // Your search logic here
   };
 
   return (
-    <div className="search-container">
-      <div className="select-container">
-        {" "}
+    <div className="search-containerAR">
+      <div className="select-containerAR">
         <select
           id="locationSelect"
           value={selectedLocation}
           onChange={(e) => setSelectedLocation(e.target.value)}
         >
-          <option value="location1">Location 1</option>
-          <option value="location2">Location 2</option>
-          <option value="location3">Location 3</option>
+          <option value="location1">قابس</option>
+          <option value="location2">قابس</option>
+          <option value="location3">قابس</option>
           {/* Add more locations as needed */}
         </select>
       </div>
 
       <input
-        className="searchbarre"
+        className="searchbarreAR"
         type="text"
-        placeholder="Type your search..."
+        placeholder="البحث عن..."
         value={searchText}
         onChange={(e) => setSearchText(e.target.value)}
       />
 
-      <button className="search-button" type="submit" onClick={performSearch}>
-        Search
+      <button className="search-buttonAR" type="submit" onClick={performSearch}>
+        ابحث
       </button>
     </div>
   );

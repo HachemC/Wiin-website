@@ -5,6 +5,8 @@ import { MyComponent } from "./imges";
 import { MyLogo } from "./logo";
 import { useHistory } from "react-router-dom";
 
+import "./loginstyle.css";
+
 <style>
   @import
   url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;1,700&family=Play:wght@700&family=Poppins:wght@200&family=Ubuntu:wght@300&display=swap');

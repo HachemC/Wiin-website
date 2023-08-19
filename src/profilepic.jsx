@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import Header from "./header";
 import { UserProfile } from "./profiledetails";
+import "./profilepicstyle.css";
 
 export const ProfilePicture = (onFormSwitch) => {
   const [selectedImage, setSelectedImage] = useState(null);

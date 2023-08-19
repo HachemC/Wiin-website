@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Header from "./header";
 import { ProfilePicture } from "./profilepic";
 import Footer from "./footer";
+import "./profileDetailsStyle.css";
 
 export const UserProfile = (props) => {
   const [userData, setUserData] = useState({
@@ -16,7 +17,11 @@ export const UserProfile = (props) => {
   const handleContactUsClick = () => {
     props.onFormSwitch("contactus"); // Call the function passed via props to switch forms
   };
+  const [selectedLanguage, setSelectedLanguage] = useState("EN");
 
+  const handleLanguageChange = (language) => {
+    setSelectedLanguage(language);
+  };
   const [editMode, setEditMode] = useState(false);
 
   const handleInputChange = (event) => {
@@ -40,7 +45,10 @@ export const UserProfile = (props) => {
 
   return (
     <>
-      <Header></Header>
+      <Header
+        onLanguageChange={handleLanguageChange}
+        selectedLanguage={selectedLanguage}
+      ></Header>
 
       <div className="page">
         <ProfilePicture></ProfilePicture>

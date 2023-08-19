@@ -1,0 +1,257 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed&family=Noto+Sans+JP:wght@600&display=swap");
+
+/* Adding "AR" to class names */
+.grid-containerAR {
+  background: linear-gradient(to bottom, #135adde0 33rem, white 50%);
+
+  display: grid;
+  height: 100vh;
+  width: auto;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  /*grid-auto-rows: repeat(12, minmax(200px, auto));*/
+  direction: rtl;
+}
+
+.auth-form-containerAR,
+.login-formAR,
+.register-formAR {
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-formAR label {
+  text-align: left;
+  padding: 0.5rem 0;
+  display: flex;
+}
+
+.login-formAR {
+  grid-row: 4;
+  grid-column: 1/5;
+  margin: 0 28px 0 0;
+}
+
+.loginAR {
+  border: none;
+  background-color: #1877f2;
+  color: white;
+  position: relative;
+  width: 19rem;
+  height: 3rem;
+  border-radius: 1.9rem;
+  font-size: 2rem;
+  top: 3rem;
+  cursor: pointer;
+}
+
+.button-linkAR {
+  background: none;
+  color: red;
+  text-decoration: underline;
+  border: none;
+}
+
+.button-link-oneAR {
+  background: none;
+  color: #2fb139;
+  text-decoration: underline;
+  border: none;
+  position: relative;
+  bottom: -25rem;
+  text-decoration: none;
+  font-family: "Noto Sans JP", sans-serif;
+  right: 21rem;
+  font-size: unset;
+  cursor: pointer;
+}
+
+.auth-form-containerAR {
+  border: solid;
+  background-color: white;
+  border-radius: 3.1rem;
+  /* height: 86%; */
+  grid-row: 2/10;
+  margin: auto;
+  width: 539px;
+  height: 780px;
+  grid-column: 4/8;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  border: 1px gray;
+  box-shadow: 9px 9px 9px 9px rgba(0, 0, 0, 0.2);
+}
+
+.textoneAR {
+  margin-right: 18px;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: larger;
+  grid-column: 1/2;
+  width: 181px;
+  /* margin: initial; */
+  margin-top: 50px;
+  height: 83px;
+  align-self: normal;
+}
+.textoneAR span {
+  color: #34a853;
+  font-family: Cairo;
+  font-size: xx-large;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.noaccAR {
+  height: 96px;
+  grid-column: 4;
+  width: 74px;
+  align-self: end;
+}
+
+.button-linkAR {
+  background: none;
+  color: #2fb139;
+  /* text-decoration: underline; */
+  border: none;
+  font-size: medium;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.login-formAR input {
+  margin: 0.9rem 0;
+  height: 3.8rem;
+  width: 28rem;
+  border-radius: 0.9rem;
+  outline-color: none;
+  outline: none;
+  border: solid 1px grey;
+}
+
+.login-formAR input:focus {
+  box-shadow: 0 0 5px #1877f2;
+}
+
+input::placeholder {
+  text-indent: 1rem;
+}
+
+.googlebtnAR {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background-color: #9dd7f36e;
+  grid-template-rows: repeat(4, 1fr);
+  height: 3.5rem;
+  /* text-align: center; */
+  width: 19rem;
+  border-radius: 0.8rem;
+  height: 4rem;
+}
+
+.googleimgAR {
+  height: 1.42rem;
+  justify-content: space-evenly;
+  /* align-items: stretch; */
+  grid-column: 2;
+  grid-row: 1;
+  justify-self: center;
+  margin-top: 18px;
+  margin-left: 17px;
+}
+
+.btngoogleeAR {
+  background: none;
+  grid-column: 3;
+  border: none;
+  color: #135addad;
+  cursor: pointer;
+  top: 0.5rem;
+  font-size: unset;
+  font-family: "Noto Sans JP", sans-serif;
+  left: 2rem;
+}
+
+.facebook-loginAR {
+  background-color: #eee;
+  width: 4rem;
+  height: 4rem;
+  position: relative;
+  border-radius: 1rem;
+}
+
+.apple-loginAR {
+  display: inline-flex;
+  background-color: #eee;
+  width: 4rem;
+  height: 4rem;
+  position: relative;
+  border-radius: 1rem;
+}
+
+.text-oneAR {
+  margin-left: 18px;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: larger;
+  grid-column: 1/5;
+  width: 247px;
+  /* margin: initial; */
+  margin-top: 50px;
+  height: 83px;
+  align-self: normal;
+}
+
+.welcometextAR {
+  width: 311px;
+  height: 115px;
+  grid-column: 2;
+  grid-row: 2;
+  margin: auto;
+  font-family: "Noto Sans JP", sans-serif;
+  color: white;
+  text-align: right;
+  color: #fff;
+  text-align: right;
+  font-family: Cairo;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.welcometext-titleAR {
+  font-size: 2em;
+}
+
+.aAR {
+  font-size: 0.65em;
+  line-height: 1.7em;
+  position: relative;
+}
+
+.welcometext p {
+  line-height: 1.5;
+  width: 311px;
+  height: 115px;
+}
+
+.welcometext h2 {
+  font-size: 3rem;
+}
+
+.loginAR {
+  font-size: x-large;
+}
+
+/* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+.loginbuttonsAR {
+  grid-column: -1;
+  justify-content: center;
+  align-items: center;
+  /* display: contents; */
+  grid-row: 3;
+  grid-column: 1/5;
+  display: inline-flex;
+  justify-content: space-around;
+}

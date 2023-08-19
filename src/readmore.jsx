@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
+import "./readmoretxt.css";
 
 const ReadMoreText = ({ text }) => {
   const [isTruncated, setIsTruncated] = useState(true);

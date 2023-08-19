@@ -3,6 +3,8 @@ import { MyComponent } from "./imges";
 import { MyLogo } from "./logo";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import { useHistory } from "react-router-dom";
+
+import "./forgetPassStyle.css";
 export const ForgotPass = (props) => {
   const [email, Setmail] = useState("");
   const handleSubmit = (e) => {

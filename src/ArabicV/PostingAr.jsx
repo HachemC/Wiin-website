@@ -1,16 +1,11 @@
 import React, { useState, useEffect } from "react";
-import Post from "./post";
-import Header from "./header";
-import "./postingstyle.css";
+import PostAR from "./PostAR";
+import HeaderAr from "./HeaderAr.jsx";
+import "./PostingAr.css";
 
-export const PostingComponent = ({ userProfilePic, onFormSwitch }) => {
+export const PostingComponentAr = ({ userProfilePic, onFormSwitch }) => {
   const [postText, setPostText] = useState("");
   const [posts, setPosts] = useState([]);
-  const [selectedLanguage, setSelectedLanguage] = useState("EN");
-
-  const handleLanguageChange = (language) => {
-    setSelectedLanguage(language);
-  };
 
   const handlePost = () => {
     if (postText.trim() === "") {
@@ -42,15 +37,16 @@ export const PostingComponent = ({ userProfilePic, onFormSwitch }) => {
 
     const interval = setInterval(() => {
       setPosts((prevPosts) =>
-        prevPosts.map((post) => ({
-          ...post,
-          timestamp: getTimeAgo(post.timestamp), // Update timestamp with relative time
+        prevPosts.map((postAR) => ({
+          ...postAR,
+          timestamp: getTimeAgo(postAR.timestamp), // Update timestamp with relative time
         }))
       );
     }, 1000); // Update every second
 
     return () => clearInterval(interval);
   }, []);
+
   const getTimeAgo = (time) => {
     const currentTime = new Date();
     const postTime = new Date(time);
@@ -68,37 +64,38 @@ export const PostingComponent = ({ userProfilePic, onFormSwitch }) => {
 
   return (
     <>
-      <Header
-        onLanguageChange={handleLanguageChange}
-        selectedLanguage={selectedLanguage}
-        onFormSwitch={onFormSwitch}
-      ></Header>
-      <div className="posting-grid">
-        <div className="posting-container">
-          <div className="user-profile-pic">
-            <img src={require("./images/male.jpeg")} alt="User Profile" />
+      <style>
+        @import
+        url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+      </style>
+      <HeaderAr onFormSwitch={onFormSwitch} />
+      <div className="posting-gridAR">
+        <div className="posting-containerAR">
+          <div className="user-profile-picAR">
+            <img src={require("../images/male.jpeg")} alt="User Profile" />
           </div>
-          <div className="post-input">
+          <div className="post-inputAR">
             <textarea
               rows="4"
-              placeholder="What's on your mind?"
+              placeholder="انشر طلبك"
               value={postText}
               onChange={(e) => setPostText(e.target.value)}
             ></textarea>
           </div>
-          <button className="ButtonPost" onClick={handlePost}>
-            Post
+          <button className="ButtonPostAR" onClick={handlePost}>
+            نشر
           </button>
         </div>
       </div>
-      <div className="posts">
+      <div className="postsAR">
         {posts.map((post) => (
-          <Post
+          <PostAR
             key={post.id}
             userProfilePic={post.userProfilePic}
             username={post.username}
             timestamp={post.timestamp}
             text={post.text}
+            onFormSwitch={onFormSwitch}
           />
         ))}
       </div>
