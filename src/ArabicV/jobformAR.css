@@ -1,0 +1,40 @@
+.jobformAR {
+  grid-column: 2;
+  display: grid;
+  direction: rtl;
+  text-align: right;
+}
+
+.jobformAR div {
+  text-align: right;
+}
+
+.jobformAR input {
+  height: 33px;
+  border: 1px solid;
+  border-color: #0163e0;
+  font-size: x-large;
+  outline: none;
+  text-align: right;
+}
+
+.jobformAR button {
+  border-radius: 35px;
+  outline: none;
+  border: none;
+  align-self: center;
+  height: 49px;
+  background-color: #0163e0;
+  color: white;
+  font-size: x-large;
+}
+
+.jobformAR textarea {
+  height: 98px;
+  font-size: x-large;
+  border-color: #0163e0;
+}
+
+.filleAR input {
+  border: none;
+}

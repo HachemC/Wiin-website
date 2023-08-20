@@ -5,6 +5,7 @@ import { ChoiceOption } from "./Radio";
 import { MyComponent } from "./imges";
 import { MyLogo } from "./logo";
 import { useHistory } from "react-router-dom";
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import "./registerstyle.css";
 export const Register = (props) => {
   const [email, setEmail] = useState("");
@@ -22,6 +23,14 @@ export const Register = (props) => {
     <>
       {" "}
       <div className="grid-container">
+        <div className="langggg">
+          <Link to="/login" className="language-buttonEN">
+            EN
+          </Link>{" "}
+          <Link to="/loginAr" className="language-buttonAR">
+            AR
+          </Link>
+        </div>
         <MyLogo></MyLogo>
         <MyComponent></MyComponent>
         <meta

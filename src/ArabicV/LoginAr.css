@@ -219,7 +219,9 @@ input::placeholder {
   font-weight: 600;
   line-height: normal;
 }
-
+.langgg {
+  grid-column: 11;
+}
 .welcometext-titleAR {
   font-size: 2em;
 }

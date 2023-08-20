@@ -23,6 +23,9 @@
   padding: 0.5rem 0;
   display: flex;
 }
+.langggg {
+  grid-column: 11;
+}
 .login-form {
   grid-row: 4;
   grid-column: 1/5;

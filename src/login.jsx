@@ -4,6 +4,7 @@ import { AppleButton } from "./apple";
 import { MyComponent } from "./imges";
 import { MyLogo } from "./logo";
 import { useHistory } from "react-router-dom";
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
 import "./loginstyle.css";
 
@@ -26,9 +27,17 @@ export const Login = (props) => {
   return (
     <>
       <div className="grid-container">
+        <div className="langggg">
+          <Link to="/login" className="language-buttonEN">
+            EN
+          </Link>{" "}
+          <Link to="/loginAr" className="language-buttonAR">
+            AR
+          </Link>
+        </div>
+
         <MyLogo></MyLogo>
         <MyComponent></MyComponent>
-
         <p className="welcometext">
           <h2 className="welcometext-title">
             Sign in to <div className="a">Your Account</div>
@@ -38,7 +47,6 @@ export const Login = (props) => {
           experience and giving you easy access to your most important
           information.
         </p>
-
         <div className="auth-form-container">
           <div className="textone">
             <p>

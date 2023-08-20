@@ -8,6 +8,8 @@ import { SearchBarAr } from "./ArabicV/SearchBarAr.jsx";
 import { SearchBar } from "./search-barre.jsx";
 
 import "./headerstyle.css";
+import { LanguageButtons } from "./LanguageButtons"; // Import the LanguageButtons component
+import "./headerstyle.css";
 
 const Header = (props) => {
   const { selectedLanguage } = props;
@@ -27,14 +29,22 @@ const Header = (props) => {
     <>
       <header className={headerClasses}>
         <div className="language-switch">
-          <button className="language-button">EN</button>
-          <button
-            className="language-button"
+          <Link
+            to="/posting"
+            className="language-buttonEN"
+            onClick={() => props.onLanguageChange("EN")}
+          >
+            EN
+          </Link>
+          <Link
+            to="/PostingAr"
+            className="language-buttonAR"
             onClick={() => props.onLanguageChange("AR")}
           >
             AR
-          </button>
+          </Link>
         </div>
+
         <div className="icon-wrapper">
           <WiinLogo />
         </div>

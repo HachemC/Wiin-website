@@ -1,0 +1,51 @@
+.selected-jobAR {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  margin-top: 10rem;
+  direction: rtl;
+}
+
+.selected-jobAR img {
+  width: 532px;
+  height: 354px;
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.selected-jobAR h2 {
+  grid-column: 6;
+  align-self: end;
+  color: #000;
+  font-family: Poppins;
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.selected-jobAR p {
+  grid-column: 6/12;
+  color: #000;
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  justify-self: self-start;
+}
+
+.dAR {
+  grid-column: 4/12;
+  justify-self: start;
+  text-align: right;
+}
+.css-pl8gqh-MuiStack-root {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row-reverse;
+}

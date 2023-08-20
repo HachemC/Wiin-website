@@ -70,7 +70,11 @@
 .post-inputAR textarea:focus {
   box-shadow: 0 0 5px #1877f2;
 }
-
+.close-popupAR {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
 .post-inputAR button {
   background-color: blue;
   color: white;

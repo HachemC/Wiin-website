@@ -12,6 +12,25 @@
   background: none;
   cursor: pointer;
   border: none;
+  text-decoration: none;
+  color: #34a853;
+  margin: 10px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.language-buttonEN {
+  background: none;
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+  color: black;
+
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
 }
 
 .language-switchAR {
@@ -30,11 +49,12 @@
   grid-row: 1;
   margin-top: 18px;
   /* color: gray; */
+  text-decoration: none;
   display: flex;
   justify-content: space-between;
   cursor: pointer;
 }
-.contact-links a {
+.contact-linksAR a {
   text-decoration: none;
   color: gray;
 }

@@ -6,7 +6,7 @@ import { MyComponent } from "../imges";
 import { MyLogo } from "../logo";
 import { useHistory } from "react-router-dom";
 import "./registerAR.css"; // Updated AR stylesheet
-
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
 export const RegisterAR = (props) => {
   const [email, setEmail] = useState("");
   const [Name, setName] = useState("");
@@ -26,6 +26,14 @@ export const RegisterAR = (props) => {
         url('https://fonts.googleapis.com/css2?family=Cairo:wght@500&display=swap');
       </style>
       <div className="grid-containerAR">
+        <div className="langgg">
+          <Link to="/register" className="language-buttonEN">
+            EN
+          </Link>{" "}
+          <Link to="/registerAR" className="language-buttonAR">
+            AR
+          </Link>
+        </div>
         <MyLogo></MyLogo>
         <MyComponent></MyComponent>
         <meta name="viewport" content="width=device-width, initial-scale=1" />

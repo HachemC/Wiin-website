@@ -1,10 +1,11 @@
-.home {
+.homeAR {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  direction: rtl;
 }
-.container3 {
+.container3AR {
   border: 1px solid gray;
   border-radius: 10px;
   height: 81%;
@@ -14,56 +15,54 @@
   gap: 100px;
   border: none;
 }
-.SideBar {
+.SideBarAR {
   border-radius: 33px;
   box-shadow: 9px 9px 9px 9px rgba(0, 0, 0, 0.1);
   flex: 1 1;
   border: 1px solid gray;
   background-color: white;
 }
-.Chat {
+.ChatAR {
   flex: 2;
   border: solid;
   border-radius: 33px;
   box-shadow: 9px 9px 9px 9px rgba(0, 0, 0, 0.1);
-
   border: 1px solid gray;
   background-color: white;
 }
-.navbar {
+.navbarAR {
   display: flex;
   align-items: center;
-
   height: 50px;
   padding: 10px;
   justify-content: space-between;
   color: black;
 }
-.l1 {
+.l1AR {
   font-weight: bold;
 }
-.user33 {
+.user33AR {
   display: flex;
   gap: 10px;
 }
-.im {
+.imAR {
   background-color: #ddddf7;
   height: 24px;
   width: 24px;
   border-radius: 50%;
   object-fit: cover;
 }
-.Search {
+.SearchAR {
   border-bottom: 1px solid black;
 }
-.inputForm {
+.inputFormAR {
   padding: 10px;
   border-radius: 25px;
   background: rgba(239, 246, 252, 0.87);
 }
-.inputForm input {
+.inputFormAR input {
 }
-.userChat {
+.userChatAR {
   padding: 10px;
   display: flex;
   align-items: center;
@@ -71,29 +70,28 @@
   color: black;
   cursor: pointer;
 }
-.userChat:hover {
+.userChatAR:hover {
   background-color: gray;
 }
-.userChat img {
+.userChatAR img {
   width: 50px;
   height: 50px;
   border-radius: 50%;
   object-fit: cover;
 }
-.userChatInfo span {
+.userChatInfoAR span {
   font-size: 18px;
   font-weight: 50;
 }
-
-.userChatInfo p {
+.userChatInfoAR p {
   font-size: 14px;
   color: lightgray;
 }
-.chat {
+.chatAR {
   flex: 2;
   border: 1px solid black;
 }
-.chatinfo {
+.chatinfoAR {
   height: 50px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   display: flex;
@@ -102,26 +100,24 @@
   padding: 10px;
   color: #303030;
 }
-.chatinfo img {
+.chatinfoAR img {
   height: 37px;
   width: 37px;
   cursor: pointer;
 }
-.mes {
+.mesAR {
   padding: 10px;
   height: calc(100% - 160px);
   overflow: scroll;
-  &.owner {
-    /*check how this will work with a condition */
+  &.ownerAR {
     p {
       background-color: blue;
-
       color: white;
       border-radius: 10px 0px 10px 10px;
     }
   }
 }
-.Inputt {
+.InputtAR {
   height: 41px;
   background-color: white;
   padding: 10px;
@@ -131,63 +127,59 @@
   border-radius: 0 0 32px 33px;
   border-top: 1px solid;
 }
-.Inputt input {
+.InputtAR input {
   width: 100%;
   border: none;
   outline: none;
   font-size: 18px;
 }
-.Inputt input::placeholder {
+.InputtAR input::placeholder {
   color: lightgray;
 }
-.tex {
+.texAR {
   display: flex;
   align-items: center;
   gap: 10px;
 }
-.tex img {
+.texAR img {
   height: 24px;
   cursor: pointer;
 }
-.ss1 {
-  height: 43px;
-  width: 96px;
+.ss1AR {
   border: none;
-  font-size: 21px;
   padding: 10px 15px;
   color: white;
   border-radius: 20px;
   background: #0163e0;
   cursor: pointer;
 }
-
-.mess {
+.messAR {
   display: flex;
   gap: 20px;
   flex-direction: row-reverse;
 }
-.messInfo {
+.messInfoAR {
   display: flex;
   flex-direction: column;
   color: gray;
   font-weight: 300;
 }
-.messInfo img {
+.messInfoAR img {
   width: 40px;
   height: 40px;
   border-radius: 50%;
   object-fit: cover;
 }
-.messContent img {
+.messContentAR img {
   width: 50%;
 }
-.messContent {
+.messContentAR {
   max-width: 80%;
   display: flex;
   flex-direction: row-reverse;
   gap: 10px;
 }
-.messContent p {
+.messContentAR p {
   border-radius: 25px;
   background: #0163e0;
   padding: 10px 20px;
@@ -200,7 +192,7 @@
   letter-spacing: 1px;
   max-width: max-content;
 }
-.searchForm input {
+.searchFormAR input {
   width: 85%;
   border: none;
   outline: none;

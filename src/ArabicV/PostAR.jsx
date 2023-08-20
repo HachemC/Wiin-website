@@ -22,7 +22,7 @@ const PostAR = ({
       queryParams.append("content", messageContent);
       queryParams.append("timestamp", new Date().toString());
 
-      history.push(`/ChatPage?${queryParams.toString()}`);
+      history.push(`/chatpageAR?${queryParams.toString()}`);
     }
   };
   const getTimeAgo = (time) => {
@@ -46,7 +46,7 @@ const PostAR = ({
   };
   const history = useHistory();
   const handleViewJobs = (props) => {
-    props.onFormSwitch("jobspage"); // Call the function passed via props to switch forms
+    props.onFormSwitch("JobspageAR"); // Call the function passed via props to switch forms
   };
   /*popup control*/
   const [showPopup, setShowPopup] = useState(false);
@@ -76,7 +76,7 @@ const PostAR = ({
         <div className="ObservAR">
           <Link
             style={{ alignContent: "center" }}
-            to="/JobsPage"
+            to="/JobsPageAR"
             className="view-oldAR"
           >
             انظر الأعمال السابقة للموفر
@@ -96,7 +96,7 @@ const PostAR = ({
             <textarea
               className="txtAR"
               rows="4"
-              placeholder="Type your message"
+              placeholder="أكتب رسالة..."
               value={messageContent}
               onChange={(e) => setMessageContent(e.target.value)}
             ></textarea>

@@ -6,6 +6,7 @@ import { MyLogo } from "../logo";
 import { useHistory } from "react-router-dom";
 
 import "./LoginAr.css";
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
 <style>
   @import
@@ -29,9 +30,16 @@ export const LoginAR = (props) => {
           @import
           url('https://fonts.googleapis.com/css2?family=Cairo:wght@500&display=swap');
         </style>
+        <div className="langgg">
+          <Link to="/login" className="language-buttonEN">
+            EN
+          </Link>{" "}
+          <Link to="/loginAr" className="language-buttonAR">
+            AR
+          </Link>
+        </div>
         <MyLogo></MyLogo>
         <MyComponent></MyComponent>
-
         <p className="welcometextAR">
           <h2 className="welcometext-titleAR">
             سجّل الدخول إلى <div className="aAR">حسابك</div>
@@ -40,7 +48,6 @@ export const LoginAR = (props) => {
           حسابك المزيد من الخيارات من خلال تخصيص تجربتك ومنحك وصولاً سهلاً إلى
           أهم معلوماتك.
         </p>
-
         <div className="auth-form-containerAR">
           <div className="textoneAR">
             <p>
