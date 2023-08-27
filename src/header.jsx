@@ -8,7 +8,7 @@ import { SearchBarAr } from "./ArabicV/SearchBarAr.jsx";
 import { SearchBar } from "./search-barre.jsx";
 
 import "./headerstyle.css";
-import { LanguageButtons } from "./LanguageButtons"; // Import the LanguageButtons component
+
 import "./headerstyle.css";
 
 const Header = (props) => {
@@ -20,7 +20,28 @@ const Header = (props) => {
     props.onFormSwitch("profiledetails");
   };
   const history = useHistory();
+  const handleLogout = async () => {
+    try {
+      // Make a POST request to your backend logout API
+      const response = await fetch("http://localhost:8081/logout", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
 
+      if (response.ok) {
+        // Logout successful, redirect to the login page
+        history.push("/login");
+        localStorage.clear();
+      } else {
+        // Handle error case
+        console.error("Logout failed");
+      }
+    } catch (error) {
+      console.error("Logout error:", error);
+    }
+  };
   const headerClasses = classNames("header", {
     "direction-rtl": selectedLanguage === "AR",
   });
@@ -84,6 +105,9 @@ const Header = (props) => {
               {selectedLanguage === "AR" ? "الملف الشخصي" : "Profile"}
             </span>
           </Link>
+          <div className="logout-button">
+            <button onClick={handleLogout}>Logout</button>
+          </div>
         </div>
       </header>
     </>

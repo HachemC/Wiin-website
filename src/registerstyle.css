@@ -122,7 +122,7 @@
   grid-column: 1/2;
   width: 181px;
   /* margin: initial; */
-  margin-top: 50px;
+
   height: 83px;
   align-self: normal;
 }
@@ -145,4 +145,8 @@
   /* You can also modify other styles to indicate focus, like box-shadow or background-color */
   /* For example: */
   box-shadow: 0 0 5px #1877f2;
+}
+.error-message {
+  color: red;
+  margin: 1px;
 }

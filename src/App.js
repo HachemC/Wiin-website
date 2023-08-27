@@ -28,6 +28,8 @@ import { ContactUsAR } from './ArabicV/ContactUsAR';
 import ChatStartAR from './ArabicV/chatpageAR';
 import HeaderAr from './ArabicV/HeaderAr';
 import Header from './header';
+import ProtectedRoute from './ProtectedRoute';
+import { useLocation } from 'react-router-dom/cjs/react-router-dom.min';
 
 
 
@@ -35,17 +37,37 @@ import Header from './header';
 
 
 function App() {
+  
+  const location = useLocation();
   const [jobs, setJobs] = useState([]);
-  const [selectedLanguage, setSelectedLanguage] = useState("EN");
+  const [selectedLanguage, setSelectedLanguage] = useState('EN');
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+
+  const handleLogin = () => {
+    setIsLoggedIn(true);
+    localStorage.setItem('isAuthenticated', 'true');
+  };
+
+  const handleLogout = () => {
+    setIsLoggedIn(false);
+    localStorage.removeItem('isAuthenticated');
+  };
 
   const handleAddJob = (newJob) => {
     const updatedJobs = [...jobs, newJob];
     setJobs(updatedJobs);
-    localStorage.setItem("jobs", JSON.stringify(updatedJobs));
+    localStorage.setItem('jobs', JSON.stringify(updatedJobs));
   };
+  useEffect(() => {
+    // Check if a user is authenticated
+    const isAuthenticated = localStorage.getItem('isAuthenticated');
+    setIsLoggedIn(isAuthenticated === 'true');
+    setIsLoading(false);
+  }, []);
 
   useEffect(() => {
-    const storedJobs = localStorage.getItem("jobs");
+    const storedJobs = localStorage.getItem('jobs');
     if (storedJobs) {
       setJobs(JSON.parse(storedJobs));
     }
@@ -54,23 +76,63 @@ function App() {
   const handleLanguageChange = (language) => {
     setSelectedLanguage(language);
   };
-
+  
+  if (isLoading) {
+    // You can render a loading indicator here
+    return <div>Loading...</div>;
+  }
+  
   return (
     <Router>
       <div className="App">
-       
         <Switch>
-          <Route path="/login" component={Login} />
-          <Route path="/posting" component={PostingComponent} />
-          <Route path="/register" component={Register} />
-          <Route path="/forgot" component={ForgotPass} />
-          <Route path="/contactus" component={ContactUs} />
-          <Route path="/profileDetails" component={UserProfile} />
-          <Route path="/Jobspage" component={() => <JobsPage jobs={jobs} onAddJob={handleAddJob} />} />
-          <Route path="/job/:title" component={() => <SelectedJobPage jobs={jobs} />} />
-          <Route path="/chatpage" component={ChatStart} />
-          <Route path="/postingAR" component={PostingComponentAr} />
-          <Route path="/loginAR" component={LoginAR} />
+       
+   
+     
+       <Route path="/login">
+          <Login onLogin={() => setIsLoggedIn(true)} />
+        </Route>
+         
+          < Route path="/register"   component={Register} />
+          <Route path="/forgetpass"  component={ForgotPass} />
+
+          <ProtectedRoute
+            path="/posting"
+            component={PostingComponent}
+            isLoggedIn={isLoggedIn}
+          />
+
+          <ProtectedRoute
+            path="/contactus"
+            component={ContactUs}
+            isLoggedIn={isLoggedIn}
+          />
+          <ProtectedRoute
+            path="/profileDetails"
+            component={UserProfile}
+            isLoggedIn={isLoggedIn}
+          />
+          <ProtectedRoute
+            path="/Jobspage"
+            component={() => <JobsPage jobs={jobs} onAddJob={handleAddJob} />}
+            isLoggedIn={isLoggedIn}
+          />
+          <ProtectedRoute
+            path="/job/:title"
+            component={() => <SelectedJobPage jobs={jobs} />}
+            isLoggedIn={isLoggedIn}
+          />
+          <ProtectedRoute
+            path="/chatpage"
+            component={ChatStart}
+            isLoggedIn={isLoggedIn}
+          />
+          <ProtectedRoute
+            path="/postingAR"
+            component={PostingComponentAr}
+            isLoggedIn={isLoggedIn}
+          />
+          <Route path="/loginAR"    component={LoginAR} />
           <Route path="/registerAR" component={RegisterAR} />
           <Route path="/forgotAr" component={ForgotPassAR} />
           <Route path="/ContactUsAr" component={ContactUsAR} />
@@ -81,7 +143,9 @@ function App() {
             render={(props) => <SelectedJobPageAR jobs={jobs} {...props} />}
           />
           <Route path="/chatpageAR" component={ChatStartAR} />
+
           <Redirect exact from="/" to="/login" />
+          
         </Switch>
       </div>
     </Router>

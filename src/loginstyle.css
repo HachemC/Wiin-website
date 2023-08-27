@@ -164,6 +164,8 @@ input::placeholder {
   margin-left: 17px;
 }
 .btngooglee {
+  width: 199px;
+  align-self: end;
   background: none;
   grid-column: 3;
   border: none;
@@ -246,4 +248,8 @@ input::placeholder {
   grid-column: 1/5;
   display: inline-flex;
   justify-content: space-around;
+}
+.error-message {
+  color: red;
+  margin: 1px;
 }

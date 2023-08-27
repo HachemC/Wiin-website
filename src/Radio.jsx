@@ -3,26 +3,20 @@ import "./App.css";
 
 import "./radiostyle.css";
 
-export const Radio = () => {
-  const [selectedOption, setSelectedOption] = useState(null);
-
-  const handleOptionSelect = (option) => {
-    setSelectedOption(option);
-  };
+export const Radio = ({ selected, onSelect }) => {
+  const options = ["Service Provider", "Service Searcher"];
 
   return (
     <div className="radio">
       <div className="choice-container">
-        <ChoiceOption
-          option="Service Provider"
-          selected={selectedOption === "Service Provider"}
-          onSelect={handleOptionSelect}
-        />
-        <ChoiceOption
-          option="Service Searcher"
-          selected={selectedOption === "Service Searcher"}
-          onSelect={handleOptionSelect}
-        />
+        {options.map((option) => (
+          <ChoiceOption
+            key={option}
+            option={option}
+            selected={selected === option}
+            onSelect={() => onSelect(option)}
+          />
+        ))}
       </div>
     </div>
   );
@@ -32,7 +26,7 @@ const ChoiceOption = ({ option, selected, onSelect }) => {
   return (
     <div
       className={`choice-option ${selected ? "selected" : ""}`}
-      onClick={() => onSelect(option)}
+      onClick={onSelect}
     >
       {option}
       {selected && <span className="check-mark">&#10004;</span>}

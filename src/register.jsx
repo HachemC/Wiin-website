@@ -7,16 +7,53 @@ import { MyLogo } from "./logo";
 import { useHistory } from "react-router-dom";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import "./registerstyle.css";
+import { useEffect } from "react";
+import RegistrationValidation from "./RegisterValidation";
+import axios from "axios";
+
 export const Register = (props) => {
   const [email, setEmail] = useState("");
-  const [Name, setName] = useState("");
-  const [Contact, setContact] = useState("");
+  const [name, setName] = useState("");
+  const [contact, setContact] = useState("");
   const [pass, setPass] = useState("");
+  const [selectedRadio, setSelectedRadio] = useState("");
   const history = useHistory();
+  const [Errors, setErrors] = useState([]);
+  const [emailError, setEmailError] = useState("");
+  const [submitted, setSubmitted] = useState(false);
+
+  useEffect(() => {
+    if (!email || !name || !contact || !pass) {
+      return;
+    }
+
+    // Check for errors and handle form submission
+    if (Errors.length === 0 && submitted) {
+      axios
+        .post("http://localhost:8081/register", {
+          email: email,
+          name: name,
+          contact: contact,
+          password: pass,
+          pos: selectedRadio,
+        })
+        .then((res) => {
+          if (res.data === "Email already used") {
+            setEmailError("Email already used");
+            setSubmitted(false);
+            return;
+          } else {
+            history.push("/login");
+          }
+        })
+        .catch((err) => console.log(err));
+    }
+  }, [Errors, email, name, contact, pass, selectedRadio, history, submitted]);
 
   const handleSubmit = (e) => {
-    e.preventDefault(); ////so the page dont lose data when reload
-    console.log(email, Name, Contact, pass, Radio.Radiovalue); ///just testing
+    e.preventDefault();
+    setErrors(RegistrationValidation(email, name, contact, pass));
+    setSubmitted(true);
   };
 
   return (
@@ -69,34 +106,44 @@ export const Register = (props) => {
             <label htmlFor="UserName">
               Enter your username or email address
             </label>
+            {Errors.includes("Email is required.") && (
+              <p className="error-message">Email is required.</p>
+            )}
+            {emailError && <p className="error-message">{emailError}</p>}
             <input
               className="un"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              type="text"
+              type="email"
               placeholder="User name"
-              name="UserName"
+              name="email"
               id="UserName"
-            ></input>
+            />
 
             <div className="NameAndNumber">
               <div className="name-field">
                 <label htmlFor="Name">Name</label>
+                {Errors.includes("Name is required.") && (
+                  <p className="error-message">Name is required.</p>
+                )}
                 <input
                   type="text"
                   placeholder="Username"
                   name="Name"
                   id="Name"
                   onChange={(e) => setName(e.target.value)}
-                  value={Name}
+                  value={name}
                 ></input>
               </div>
 
               <div className="contact-field">
                 <label htmlFor="contactNumber">Contact Number</label>
+                {Errors.includes("Contact number is required.") && (
+                  <p className="error-message">Contact number is required.</p>
+                )}
                 <input
                   onChange={(e) => setContact(e.target.value)}
-                  value={Contact}
+                  value={contact}
                   type="number"
                   placeholder="Contact number"
                   name="contactNumber"
@@ -106,6 +153,9 @@ export const Register = (props) => {
             </div>
 
             <label htmlFor="password">Enter your password</label>
+            {Errors.includes("Password is required.") && (
+              <p className="error-message">Password is required.</p>
+            )}
             <input
               onChange={(e) => setPass(e.target.value)}
               value={pass}
@@ -116,9 +166,8 @@ export const Register = (props) => {
             ></input>
 
             <label htmlFor="signup">Register as</label>
-            <Radio></Radio>
+            <Radio selected={selectedRadio} onSelect={setSelectedRadio} />
             <input
-              onClick={() => history.push("/posting")}
               type="submit"
               id="signup"
               name="signup"
